@@ -1,0 +1,90 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: montserrat;
+    color: azure;
+}
+
+label.logo {
+    font-size: 35px;
+    line-height: 100px;
+    margin-left: 30px;
+}
+
+nav {
+    background-color: black;
+    color: azure;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    nav ul {
+        float: right;
+        font-size: 30px;
+        line-height: 100px;
+        margin-right: 50px;
+    }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+            nav ul li select {
+                background: transparent;
+                color: azure;
+                outline: none;
+                border: none;
+                font-family: montserrat;
+                font-size: 30px;
+                list-style: none;
+            }
+
+                nav ul li select option {
+                    color: black;
+                }
+
+                    nav ul li select option:active {
+                        color: azure;
+                    }
+
+.btn {
+    background: transparent;
+    color: azure;
+    outline: none;
+    border: none;
+    font-family: montserrat;
+    font-size: 30px;
+    list-style: none;
+}
+
+table, th, td {
+    font-size: 30px;
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.container {
+    width: 100%;
+    min-height: 200px;
+}
+
+.row {
+    justify-content: center;
+}
+
+table {
+    width:95%;
+    margin: 30px;
+}
+
+footer{
+    width : 100px;
+}
