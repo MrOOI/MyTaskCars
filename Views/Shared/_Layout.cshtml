@@ -1,50 +1,34 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="~/wwwroot/Css/style.css">
+    <link rel="stylesheet" href="~/Css/style.css">
 </head>
+
 <body>
-    
-    <header>  
-            <nav>
-    <label class="logo">Logo</label>
 
-    <ul>        
-        <li id="color_picker">
-
-              <select id="choose_color" name="color_pick">
-                                <option value="">Select a color</option>
-                                <option value="white">white</option>
-                                <option value="black">black</option>
-                                <option value="red">red</option>
-                                <option value="gray">gray</option>
-              </select>
-
-        </li>
-        <li id="start_price">Start price</li>
-        <li id="end_price">End price</li>
-        <li id="search_car" ><button type="button" class="btn">Search</button></li>
-    </ul>
-
-</nav>
+    <header>
+        <nav>
+            <a asp-controller="car" asp-action="index" class="logo"> Home </a>
+        </nav>
     </header>
 
     <main>
         @RenderBody()
 
-      <table>
-        <tr>
-            <th>Id</th>
-            <th>Model</th>
-            <th>Owner</th>
-            <th>Color</th>
-            <th>Price</th>
-        </tr>
-             @foreach(var item in Model)
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Owner</th>
+                <th>Color</th>
+                <th>Price</th>
+            </tr>
+            @foreach (var item in Model)
             {
-                <tr>                
+                <tr>
                     <td>@item.Id</td>
                     <td>@item.Model</td>
                     <td>@item.Owner</td>
@@ -52,9 +36,10 @@
                     <td>@item.Price</td>
                 </tr>
             }
-     </table>
-   </main>
+        </table>
+    </main>
 
     <footer> </footer>
 </body>
+
 </html>
