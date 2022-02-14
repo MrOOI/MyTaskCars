@@ -30,7 +30,7 @@ namespace MyTaskCars.Controllers
                 List = _carService.GetByColor(viewModel.rang),
                 rang = Rang.black
             };
-            return View("Index", carsViewModel);
+            return View("ByColor", carsViewModel);
         }
 
         public IActionResult FilterByPrice(PriceViewModel priceModel)

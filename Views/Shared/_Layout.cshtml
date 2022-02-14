@@ -12,7 +12,14 @@
 
     <header>
         <nav>
-            <a asp-controller="car" asp-action="index" class="logo"> Home </a>
+            <ul>
+                <li><a asp-controller="car" asp-action="index" class="logo"> Home </a></li>
+                <li><a asp-controller="car" asp-action="filterbyprice" class="logo"> By price </a></li>
+                <li><a asp-controller="car" asp-action="filterbycolor" class="logo"> By color </a></li>
+            </ul>
+
+            
+            
         </nav>
     </header>
 

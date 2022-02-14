@@ -7,32 +7,6 @@
     Layout = "_Layout";
 }
 
-<div class="container container-fluid">
-    <div class="row">
-        <div class="col col-lg-4">
-            <label for="Ch-color">Choose color</label>
-            <form class="form" asp-controller="car" asp-action="filterbycolor" method="post">
-                <select asp-for="@Model.rang" id="nimadir" asp-items="Html.GetEnumSelectList<Rang>()"
-                    class="form-select">
-                </select>
-                <input type="submit" />
-            </form>
-        </div>
-
-        <div class="col col-lg-4">
-            <label for="S-price">Start price</label>
-            <input type="number" class="form-input form-control" id="S-price">
-        </div>
-
-        <div class="col col-lg-4">
-            <label for="E-price">End price</label>
-            <input type="number" class="form-input form-control" id="E-price">
-            <input type="submit" />
-        </div>
-
-    </div>
-</div>
-
 <table class="table">
     <tr>
         <th>Id</th>

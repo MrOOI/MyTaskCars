@@ -11,20 +11,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>ByPrice</h1>
-
+<h4>Sort by price</h4>
 
 <div class="container container-fluid">
     <div class="row">
-        <div class="col col-lg-4">
-            <label for="Ch-color">Choose color</label>
-            <form class="form" asp-controller="car" asp-action="filterbycolor" method="post">
-                <select id="nimadir" asp-items="Html.GetEnumSelectList<Rang>()"
-                    class="form-select">
-                </select>
-                <input type="submit" />
-            </form>
-        </div>
 
         <div class="col col-lg-4">
              
@@ -32,19 +22,14 @@
                 <label for="S-price">
                     @Html.DisplayNameFor(model => model.startPrice)
                 </label>         
-                <input asp-item="@Html.DisplayNameFor(model=>model.startPrice)" type="number" class="form-input form-control" id="S-price">
-            </form>           
-           
-        </div>
+                <input asp-for="@Model.startPrice" type="number" class="form-input form-control" id="S-price">
 
-        <div class="col col-lg-4">
-             <form class ="form" asp-controller="car" asp-action="filterbyprice" method="post">
                 <label for="E-price">
                     @Html.DisplayNameFor(model => model.endPrice)  
                 </label>             
-                <input asp-item="@Html.DisplayNameFor(model=> model.endPrice)" type="number" class="form-input form-control" id="E-price">
+                <input asp-for="@Model.endPrice" type="number" class="form-input form-control" id="E-price">
                 
-                <input type="submit" asp-controller="car" asp-action="filterbyprice" method="post" />
+                <input type="submit"/>
             </form>
            
         </div>

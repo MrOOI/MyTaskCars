@@ -9,6 +9,12 @@ body {
   color: azure;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 label.logo {
   font-size: 100px;
   line-height: 100px;
@@ -72,4 +78,7 @@ a {
   color: azure;
   min-height: 150px !important;
   width: 100% !important;
+}
+h4{
+    margin-left:50px;
 }
