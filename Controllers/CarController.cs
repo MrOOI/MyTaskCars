@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MyTaskCars.Enums;
 using MyTaskCars.Services;
+using MyTaskCars.ViewModels;
 
 namespace MyTaskCars.Controllers
 {
@@ -14,18 +15,33 @@ namespace MyTaskCars.Controllers
         }
         public ViewResult Index()
         {
-            return View("Index", _carService.GetAllCars());
+            CarsViewModel viewModel = new CarsViewModel()
+            {
+                List = _carService.GetAllCars(),
+                rang = Rang.black
+            };
+            return View("Index", viewModel);
         }
 
-        public IActionResult FilterByColor(Rang color)
+        public IActionResult FilterByColor(CarsViewModel viewModel)
         {
-
-            return View("ByColor", _carService.GetByColor(color));
+            CarsViewModel carsViewModel = new CarsViewModel()
+            {
+                List = _carService.GetByColor(viewModel.rang),
+                rang = Rang.black
+            };
+            return View("Index", carsViewModel);
         }
 
-        public IActionResult FilterByPrice(int startPrice, int endPrice)
+        public IActionResult FilterByPrice(PriceViewModel priceModel)
         {
-            return View("Index", _carService.GetByPrice(startPrice, endPrice));
+            PriceViewModel priceViewModel = new PriceViewModel()
+            {
+                list = _carService.GetByPrice(priceModel.startPrice, priceModel.endPrice),
+                startPrice = priceModel.startPrice,
+                endPrice = priceModel.endPrice
+            };
+            return View("ByPrice", priceViewModel);
         }
     }
 }

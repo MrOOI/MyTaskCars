@@ -25,24 +25,17 @@ namespace MyTaskCars.Services
             return Mashinalar;
         }
 
-        public List <Avtomobil> GetByColor(Rang color)
+        public List<Avtomobil> GetByColor(Rang color)
         {
             Mashinalar = new List<Avtomobil>();
-            Mashinalar = CarsDb.autos().Where(item => item.Color==color).ToList();
-            return Mashinalar;
-        }      
-
-        public List<Avtomobil> GetById(int id)
-        {
-            Mashinalar = new List<Avtomobil>();
-            Mashinalar = CarsDb.autos().Where(item => item.Id == id).ToList();
+            Mashinalar = CarsDb.autos().Where(item => item.Color == color).ToList();
             return Mashinalar;
         }
 
         public List<Avtomobil> GetByPrice(int startPrice, int endPrice)
         {
             Mashinalar = new List<Avtomobil>();
-            Mashinalar = CarsDb.autos().Where(item => item.Price>startPrice && item.Price<endPrice).ToList();
+            Mashinalar = CarsDb.autos().Where(item => item.Price > startPrice && item.Price < endPrice).ToList();
             return Mashinalar;
         }
     }
